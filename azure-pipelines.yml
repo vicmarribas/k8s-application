@@ -8,19 +8,6 @@ trigger:
 resources:
 - repo: self
 
-variables:
-
-  # Container registry service connection established during pipeline creation
-  dockerRegistryServiceConnection: '356d6e30-3e7b-458c-af4d-25e5dcc05cd7'
-  imageRepository: 'ksapplication'
-  containerRegistry: 'ghostauacr.azurecr.io'
-  dockerfilePath: '**/Dockerfile'
-  tag: '$(Build.BuildId)'
-  imagePullSecret: 'ghostauacr8f8b-auth'
-
-  # Agent VM image name
-  vmImageName: 'ubuntu-latest'
-  
 
 stages:
 - stage: Build
